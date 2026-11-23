@@ -10,7 +10,13 @@ export default function SiteFooter() {
   return (
     <Box
       component="footer"
-      sx={{ py: 3, textAlign: 'center', fontSize: '0.875rem', color: '#bdbdbd', bgcolor: '#000' }}
+      sx={{
+        py: 3,
+        textAlign: 'center',
+        fontSize: '0.875rem',
+        bgcolor: 'var(--color-primary)',
+        color: 'var(--color-bg-primary)',
+      }}
     >
       © 2026 My Portfolio. All rights reserved.
     </Box>

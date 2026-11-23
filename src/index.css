@@ -1,3 +1,58 @@
+/* 컬러 팔레트 (Gentle Monster 기반, docs: 컬러 팔레트 디자인 시스템.md) */
+:root {
+  /* Primary Colors */
+  --color-primary: #111111;
+  --color-primary-light: #555555;
+  --color-primary-dark: #000000;
+
+  /* Secondary Colors */
+  --color-secondary: #E9E6E1;
+  --color-accent: #E8541E;
+
+  /* Background Colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+
+  /* Text Colors */
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+  --color-text-muted: #999999;
+
+  /* Interactive Colors */
+  --color-button-primary: #111111;
+  --color-button-hover: #555555;
+  --color-link: #111111;
+  --color-link-hover: #E8541E;
+
+  /* Border */
+  --color-border: #E5E5E5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #FFFFFF;
+    --color-primary-light: #BBBBBB;
+    --color-primary-dark: #FFFFFF;
+
+    --color-secondary: #2A2926;
+    --color-accent: #FF7A45;
+
+    --color-bg-primary: #0A0A0A;
+    --color-bg-secondary: #161616;
+
+    --color-text-primary: #F5F5F5;
+    --color-text-secondary: #BBBBBB;
+    --color-text-muted: #777777;
+
+    --color-button-primary: #FFFFFF;
+    --color-button-hover: #CCCCCC;
+    --color-link: #F5F5F5;
+    --color-link-hover: #FF7A45;
+
+    --color-border: #2E2E2E;
+  }
+}
+
 /* CSS 초기화 */
 * {
   box-sizing: border-box;
@@ -11,10 +66,32 @@ html, body {
   min-height: 100vh;
 }
 
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* 링크: 기본 검정 + 밑줄, 호버 시 오렌지 */
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
 /* Root 앱 컨테이너 설정 */
 #root {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* 인쇄: 배경 제거, 글자만 #111111 */
+@media print {
+  * {
+    background: none !important;
+    color: #111111 !important;
+  }
 }

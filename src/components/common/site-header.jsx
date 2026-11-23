@@ -19,7 +19,7 @@ export default function SiteHeader() {
       position="sticky"
       color="inherit"
       elevation={ 0 }
-      sx={{ bgcolor: '#000', color: '#fff', borderBottom: '1px solid #333' }}
+      sx={{ bgcolor: 'var(--color-primary)', color: 'var(--color-bg-primary)' }}
     >
       <Container maxWidth="md" sx={{ px: { xs: 2, md: 3 } }}>
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
@@ -40,7 +40,8 @@ export default function SiteHeader() {
                   px: { xs: 1, md: 2 },
                   borderBottom: '2px solid transparent',
                   borderRadius: 0,
-                  '&.active': { borderBottomColor: '#fff', fontWeight: 700 },
+                  '&:hover': { color: 'var(--color-accent)', bgcolor: 'transparent' },
+                  '&.active': { borderBottomColor: 'var(--color-bg-primary)', fontWeight: 700 },
                 }}
               >
                 { label }
