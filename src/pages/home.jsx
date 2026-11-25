@@ -1,7 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { Box, Button, Chip } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import GuestbookBoard from '../components/home/guestbook-board';
 import PageContainer from '../components/ui/page-container';
 import SectionCard from '../components/ui/section-card';
 
@@ -68,7 +67,6 @@ export default function Home() {
       <SectionCard id="contact" title="Contact" isDark>
         <Box>Email: your-email@example.com</Box>
         <Box>GitHub: github.com/your-id</Box>
-        <GuestbookBoard />
       </SectionCard>
     </PageContainer>
   );
